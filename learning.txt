@@ -63,7 +63,19 @@ npx react-native run-ios --simulator="iPhone 14"
 Login with Facebook :- https://youtu.be/2ZyMUROcC2g
 Facebook Developer Account :- https://developers.facebook.com
 
-Sign in with google :-https://youtu.be/2ZyMUROcC2g
+Login in with google :-https://youtu.be/2ZyMUROcC2g
 
 installing firebase in ios -> rn-firebase
 
+Env variable in react-native 
+Link :- https://youtu.be/sYLTPfN_upg
+
+Package :- https://www.npmjs.com/package/react-native-dotenv
+
+Image upload in react-native :-
+1. react-native-image-crop-picker
+Link :- https://www.npmjs.com/package/react-native-image-crop-picker
+
+2.For Permission :-
+ Camera and other in IOS :-
+https://www.npmjs.com/package/react-native-permissions
