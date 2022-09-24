@@ -79,3 +79,19 @@ Link :- https://www.npmjs.com/package/react-native-image-crop-picker
 2.For Permission :-
  Camera and other in IOS :-
 https://www.npmjs.com/package/react-native-permissions
+
+Share option in react-native:-
+https://www.youtube.com/watch?v=vXzpEJeVmi8
+npm i react-native-share
+
+=============== Starting Monodb server =======================
+Starting mongoldb server :- 
+brew services start mongodb/brew/mongodb-community@4.4
+
+
+// react-native vector icon 
+Link:- https://www.youtube.com/watch?v=B75yZwYS4z8&t=391s
+Package :- react-native-vector-icons
+
+// which file to open in Xcode
+project_name.xcworkspace
