@@ -90,8 +90,77 @@ brew services start mongodb/brew/mongodb-community@4.4
 
 
 // react-native vector icon 
-Link:- https://www.youtube.com/watch?v=B75yZwYS4z8&t=391s
+Link:- https://www.youtube.com/watch?v=B75yZwYS4z8&t=391s for android 
 Package :- react-native-vector-icons
 
 // which file to open in Xcode
 project_name.xcworkspace
+
+Icon for IOS :-
+https://youtu.be/fVoEojORQyQ
+// ------------------------------- end -----------------------
+
+
+How to use svg in react-native :-
+react-native-svg && react-native-svg-transformer and add below line of code in metro.config.js
+const { getDefaultConfig } = require("expo/metro-config");
+
+module.exports = (() => {
+  const config = getDefaultConfig(__dirname);
+
+  const { transformer, resolver } = config;
+
+  config.transformer = {
+    ...transformer,
+    babelTransformerPath: require.resolve("react-native-svg-transformer"),
+  };
+  config.resolver = {
+    ...resolver,
+    assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),
+    sourceExts: [...resolver.sourceExts, "svg"],
+  };
+
+  return config;
+})();
+
+Link :- https://www.youtube.com/watch?v=eaM6g5mEzvY
+
+SVG into react-component :- 
+https://react-svgr.com/playground/
+
+//--------------------- downloading Image to gallery -----------------------
+https://stackoverflow.com/questions/58355513/react-native-download-image-from-url-and-save-in-gallery
+// downloading image in react-native for android :- https://aboutreact.com/download-image-in-react-native/
+// follow this instruction :- https://github.com/joltup/rn-fetch-blob/wiki/Manually-Link-Package#index for android
+// follow this for iOS :- https://github.com/joltup/rn-fetch-blob#readme
+npm install @react-native-community/cameraroll --save
+
+// image url to base64 conversion :-
+https://github.com/andrebradshaw/utilities/blob/master/web%20file%20management/getFileFromWeb.js
+async function parseURI(d){
+  var reader = new FileReader();    /* https://developer.mozilla.org/en-US/docs/Web/API/FileReader */
+  reader.readAsDataURL(d);          /* https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL */
+  return new Promise((res,rej)=> {  /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise */
+    reader.onload = (e) => {        /* https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onload */
+      res(e.target.result)
+    }
+  })
+} 
+
+async function getDataBlob(url){
+  var res = await fetch(url);
+  var blob = await res.blob();
+  var uri = await parseURI(blob);
+  return uri;
+}
+
+getDataBlob(your_url);
+
+// react-native new setup 
+https://reactnative.dev/docs/environment-setup
+
+Shadow in iOS app
+https://www.javatpoint.com/box-shadow-in-react-native
+
+// http://192.168.1.2:8000
+// https://stackoverflow.com/questions/73301290/package-rn-fetch-blob-contains-invalid-configuration-dependency-hooks-is-not
